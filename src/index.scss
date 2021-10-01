@@ -1,0 +1,11 @@
+@import "./scss/variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $space-cadet;
+    color: white;
+    font-family: $primary-font;
+}

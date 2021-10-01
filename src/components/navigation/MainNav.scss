@@ -1,0 +1,30 @@
+@import "../../scss/variables";
+
+#navContainer {
+    background: darken($space-cadet, 10);
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    color: white;
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    // box-shadow: -10px -5px 25px lighten($chestnut, 10);
+
+    #mainNavigation {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+            li {
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                transition: border-bottom 0.2s;
+
+                &:hover,
+                .active {
+                    border-bottom: 2px solid $melon;
+                }
+            }
+        }
+    }
+}
