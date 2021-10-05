@@ -4,7 +4,7 @@ import "./MainNav.scss";
 
 const MainNav = (): JSX.Element => {
     return (
-        <div id="navContainer">
+        <header id="navContainer">
             <nav id="mainNavigation" className="container">
                 <ul>
                     <li>Home</li>
@@ -13,7 +13,7 @@ const MainNav = (): JSX.Element => {
                     <li>Contact</li>
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 };
 

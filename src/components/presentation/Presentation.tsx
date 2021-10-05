@@ -1,16 +1,15 @@
-import { PrimaryButton } from "@fluentui/react/lib/components/Button/PrimaryButton/PrimaryButton";
 import React from "react";
+import { Link } from "react-router-dom";
 
-import data from "./Presentation.json";
 import "./Presentation.scss";
-
-const name = "Johannes Bergendahl";
 
 const Presentation = (): JSX.Element => {
     return (
         <div id="presentation">
             <div className="presentation-group">
-                <h1 className="fancy-hello">Hello! 👋</h1>
+                <h1 className="fancy-hello">
+                    Hello! <span className="wave-emoji">👋</span>
+                </h1>
             </div>
             <div className="presentation-group">
                 <h1 className="presentation-description">My name is</h1>
@@ -18,12 +17,18 @@ const Presentation = (): JSX.Element => {
             </div>
             <div className="presentation-group">
                 <h1 className="presentation-description">&amp; I am a </h1>
-                <h1 className="fancy-usp">.NET Web Developer</h1>
+                <h1 className="fancy-name">.NET Web Developer</h1>
             </div>
-            <div className="button-group">
-                <PrimaryButton text="My skills" />
-                <PrimaryButton text="My projects" />
-                <PrimaryButton text="My resume" />
+            <div className="row button-group">
+                <Link to="/about" className="btns btn-large col-auto">
+                    About me
+                </Link>
+                <Link to="/projects" className="btns btn-large col-auto mx-3">
+                    Projects
+                </Link>
+                <Link to="/resume" className="btns btn-large col-auto">
+                    Resume
+                </Link>
             </div>
         </div>
     );

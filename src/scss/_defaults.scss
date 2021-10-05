@@ -1,0 +1,18 @@
+.btns {
+    color: lighten($zomp, 15);
+    width: max-content;
+    border: 1px solid $zomp;
+    transition: 0.2s;
+    background: transparent;
+    border-radius: 4px;
+    text-decoration: none;
+
+    &:hover {
+        background: rgba($zomp, 0.5);
+        color: white;
+    }
+
+    &.btn-large {
+        padding: 0.5rem 2rem;
+    }
+}

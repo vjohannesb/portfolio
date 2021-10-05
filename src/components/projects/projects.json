@@ -1,0 +1,12 @@
+{
+    "projects": [
+        {
+            "title": "string",
+            "description": "string",
+            "languages": ["string[]"],
+            "frameworks": ["string[]"],
+            "github": "string",
+            "external": "string"
+        }
+    ]
+}

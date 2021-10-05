@@ -1,12 +1,22 @@
 @import "../../scss/variables";
 
 @keyframes TextTest {
-    0% {
-        opacity: 0;
+    0%,
+    100% {
+        transform: rotateZ(0deg), translateY(0px);
     }
 
-    100% {
-        opacity: 1;
+    10%,
+    30%,
+    60%,
+    80%,
+    90% {
+        transform: rotateZ(0deg) translateY(-10px);
+    }
+
+    50%,
+    70% {
+        transform: rotateZ(60deg) translateY(-10px);
     }
 }
 
@@ -17,21 +27,33 @@
     .presentation-group {
         margin: 0;
 
-        span:not(.exclamation-mark) {
-            display: block;
-        }
-
         .fancy-hello {
             margin-bottom: 5rem;
+
+            .wave-emoji {
+                display: inline-block;
+                animation-name: TextTest;
+                animation-duration: 1.25s;
+                animation-fill-mode: backwards;
+                animation-direction: alternate-reverse;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-delay: 1s;
+                user-select: none;
+
+                transition: 1s;
+                &:active {
+                    transition: 0.5s;
+                    transform: rotateZ(360deg);
+                }
+            }
         }
 
         .fancy-name {
+            width: fit-content;
             font-weight: bold;
             font-size: 3.5rem;
             transition: text-shadow 0.5s;
-            width: fit-content;
-            animation: TextTest 5s;
-            animation-iteration-count: 1;
 
             &:hover {
                 text-shadow: -2.5px 2.5px 0px $melon,
