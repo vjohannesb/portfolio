@@ -8,7 +8,13 @@ type Project = {
     title: string;
     description: string;
     languages: string[];
-    frameworks?: string[];
+    tech?: string[];
     github?: string;
     external?: string;
+};
+
+type Skill = {
+    name: string;
+    weight: number;
+    extra?: { name: string }[];
 };
