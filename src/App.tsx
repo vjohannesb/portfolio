@@ -1,34 +1,32 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import "./App.scss";
+import { useAppContext } from "./components/context/ContextProvider";
+import CustomSwitch from "./components/custom/CustomSwitch";
+import Footer from "./components/footer/Footer";
 import MainNav from "./components/navigation/MainNav";
-import Presentation from "./components/presentation/Presentation";
-import Projects from "./components/projects/Projects";
+import { themes } from "./components/context/Themes";
 
 function App(): JSX.Element {
+    const {
+        darkThemeState: { darkTheme },
+    } = useAppContext();
+
     return (
-        <div className="App">
-            <MainNav />
-            <div className="container mt-5">
+        <>
+            <div
+                className="App"
+                style={darkTheme ? themes.darkTheme : themes.lightTheme}>
                 <Router>
-                    <Switch>
-                        <Route path="/about">
-                            <h1>About</h1>
-                        </Route>
-                        <Route path="/projects">
-                            <Projects />
-                        </Route>
-                        <Route path="/resume">
-                            <h1>Resume</h1>
-                        </Route>
-                        <Route path="/">
-                            <Presentation />
-                        </Route>
-                    </Switch>
+                    <MainNav />
+                    <div className="container mt-5">
+                        <CustomSwitch />
+                    </div>
                 </Router>
+                <Footer />
             </div>
-        </div>
+        </>
     );
 }
 

@@ -1,6 +1,8 @@
 @import "../../scss/variables";
 
-@keyframes TextTest {
+$pres-fadein: 0.75s;
+
+@keyframes WaveEmoji {
     0%,
     100% {
         transform: rotateZ(0deg), translateY(0px);
@@ -16,7 +18,7 @@
 
     50%,
     70% {
-        transform: rotateZ(60deg) translateY(-10px);
+        transform: rotateZ(50deg) translateY(-10px);
     }
 }
 
@@ -24,47 +26,73 @@
     margin-top: 10%;
     font-family: $secondary-font;
 
+    &.anim-done {
+        .fancy-name,
+        .fancy-title {
+            text-shadow: -2.5px 2.5px 0px $melon,
+                -5px 5px 0px darken($melon, 10),
+                -7.5px 7.5px 0px darken($melon, 20);
+        }
+    }
+
+    .contacts {
+        margin-top: 0.5rem;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        i {
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, color 0.2s;
+            position: relative;
+
+            &:hover {
+                transform: translateY(-0.25rem);
+                color: $zomp;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .presentation-illustration {
+        .presentation-img {
+            width: 100%;
+        }
+    }
+
     .presentation-group {
         margin: 0;
 
         .fancy-hello {
+            font-weight: bold;
+            font-size: 3rem;
             margin-bottom: 5rem;
+            position: relative;
+            display: inline-block;
 
             .wave-emoji {
                 display: inline-block;
-                animation-name: TextTest;
-                animation-duration: 1.25s;
-                animation-fill-mode: backwards;
-                animation-direction: alternate-reverse;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-delay: 1s;
+                animation: WaveEmoji 1.25s ease-out $pres-fadein * 4;
                 user-select: none;
-
                 transition: 1s;
-                &:active {
+
+                &:hover {
                     transition: 0.5s;
                     transform: rotateZ(360deg);
                 }
             }
         }
 
-        .fancy-name {
-            width: fit-content;
+        .fancy-name,
+        .fancy-title {
+            opacity: 0;
             font-weight: bold;
             font-size: 3.5rem;
-            transition: text-shadow 0.5s;
-
-            &:hover {
-                text-shadow: -2.5px 2.5px 0px $melon,
-                    -5px 5px 0px darken($melon, 10),
-                    -7.5px 7.5px 0px darken($melon, 20);
-            }
-        }
-
-        .fancy-usp {
-            font-weight: bold;
-            font-size: 3.5rem;
+            transition: 0.5s;
         }
 
         .presentation-description {
@@ -72,5 +100,34 @@
             font-size: 2rem;
             color: lighten($zomp, 15);
         }
+
+        .presentation-description,
+        .fancy-name,
+        .fancy-title {
+            opacity: 0;
+            animation: FadeIn $pres-fadein ease-in 0s 1 forwards;
+        }
+
+        .fancy-name {
+            animation-delay: $pres-fadein;
+        }
+
+        .pd-iama {
+            animation-delay: $pres-fadein * 2;
+        }
+
+        .fancy-title {
+            animation-delay: $pres-fadein * 3;
+        }
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
