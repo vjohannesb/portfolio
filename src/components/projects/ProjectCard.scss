@@ -1,87 +1,49 @@
 @import "../../scss/variables";
 
 .project-card {
-    color: black;
     border-radius: 4px;
-    text-align: right;
-
-    display: grid;
-    max-height: 200px;
-    gap: 1rem;
-    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "image image title title title"
-        "image image desc desc desc"
-        "image image tech tech tech"
-        "image image links links links";
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    margin-bottom: 1.5rem;
+    font-family: $secondary-font;
+    position: relative;
 
     .project-title {
-        font-family: $secondary-font;
-        font-size: 3rem;
-        text-transform: uppercase;
-        width: min-content;
-        justify-self: flex-end;
+        color: $zomp;
+    }
+
+    .icon-octocat,
+    .icon-extlink {
+        width: 30px;
     }
 
     ul {
         list-style-type: none;
         display: flex;
-        margin-right: 0;
+        font-size: 0.875rem;
         font-family: monospace;
-        color: white;
+        padding-left: 0;
+        max-width: 100%;
+        position: absolute;
+        bottom: 0;
+        color: $light-slate;
 
         li {
-            border: 2px dashed $zomp;
-            margin-right: 1rem;
-            padding: 0.25rem 0.5rem;
-            text-align: center;
-            transition: 0.1s;
-            color: lighten($light-slate, 15);
-
-            &:hover {
-                border: 2px dashed $melon;
-                border-radius: 6px;
-                color: white;
-                transform: rotateZ(9deg);
+            &.project-lang-li {
+                margin-right: 1rem;
             }
 
-            &:nth-of-type(2n + 1):hover {
-                transform: rotateZ(-9deg);
+            &.project-tech-li {
+                margin-left: 1rem;
             }
         }
     }
 
-    .project-image {
-        grid-area: image;
-        width: 400px;
-        height: 200px;
-        align-self: center;
+    .project-langs {
     }
-
-    .project-title {
-        grid-area: title;
-        color: lighten($zomp, 15);
-    }
-
     .project-tech {
-        grid-area: tech;
-        justify-self: flex-end;
     }
-
     .project-description {
-        grid-row: 2;
-        grid-column-start: 2;
-        grid-column-end: 6;
-        height: fit-content;
-        background: lighten($space-cadet, 15);
-        border-radius: 4px;
-        color: $light-slate;
-        font-size: 18px;
-        align-self: center;
-
-        p {
-            margin: 1rem;
-        }
     }
 }

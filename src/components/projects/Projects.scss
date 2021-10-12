@@ -1,0 +1,26 @@
+@import "../../scss/variables";
+
+.project-grid {
+    counter-reset: projects 1;
+    display: grid;
+    height: 2000px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2rem;
+
+    .project-card {
+        background: lighten($space-cadet, 50);
+        border: 2px solid red;
+        height: 100%;
+
+        @for $i from 0 through 30 {
+            &:nth-child(#{$i + 1}) {
+                $col: ($i % 2) + 1;
+                grid-column-start: $col;
+                grid-column-end: $col + 1;
+                grid-row-start: $i + 1;
+                grid-row-end: $i + 3;
+            }
+        }
+    }
+}
