@@ -1,12 +1,15 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import illustration from "../../img/undraw_developer_activity.svg";
+import { useAppContext } from "../context/ContextProvider";
 
 import "./Presentation.scss";
 
 const Presentation = (): JSX.Element => {
-    const [animDone, setAnimDone] = useState(false);
+    const {
+        animState: { animDone, setAnimDone },
+    } = useAppContext();
 
     const onAnimationEnd = () => {
         setAnimDone(true);
