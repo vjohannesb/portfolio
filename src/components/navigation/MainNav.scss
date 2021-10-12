@@ -90,6 +90,7 @@
                     &:hover {
                         color: $zomp;
                     }
+
                     &::before {
                         content: "";
                         left: calc(50% - 3px);
@@ -99,7 +100,7 @@
                         opacity: 0;
                         position: absolute;
                         transition: 0.2s;
-                        background: $zomp;
+                        background: lighten($zomp, 15);
                         border-radius: 100%;
                         visibility: hidden;
                     }
@@ -111,6 +112,11 @@
                         height: 6px;
                         width: 6px;
                         opacity: 1;
+                        background: $zomp;
+                    }
+
+                    &.active::before {
+                        background: lighten($zomp, 15);
                     }
                 }
             }
