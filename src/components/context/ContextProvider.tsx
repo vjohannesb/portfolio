@@ -1,0 +1,72 @@
+import React, {
+    useContext,
+    createContext,
+    useState,
+    useEffect,
+    CSSProperties,
+} from "react";
+
+type AnimState = {
+    animDone: boolean;
+    setAnimDone: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+type DarkThemeState = {
+    darkTheme: boolean;
+    setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+type Context = {
+    animState: AnimState;
+    darkThemeState: DarkThemeState;
+};
+
+const defaults = {
+    animState: {
+        animDone: false,
+        setAnimDone: (): boolean => false,
+    },
+    darkThemeState: {
+        darkTheme: false,
+        setDarkTheme: (): boolean => true,
+    },
+};
+
+const AppContext = createContext<Context>(defaults);
+
+export function useAppContext(): Context {
+    return useContext(AppContext);
+}
+
+//* Component
+type propTypes = {
+    children: React.ReactNode;
+};
+
+const ContextProvider = ({ children }: propTypes): JSX.Element => {
+    const [animDone, setAnimDone] = useState(false);
+    const [darkTheme, setDarkTheme] = useState(true);
+
+    useEffect(() => {
+        localStorage.setItem("darkTheme", String(darkTheme));
+    }, [darkTheme]);
+
+    const contextState: Context = {
+        animState: {
+            animDone: animDone,
+            setAnimDone: setAnimDone,
+        },
+        darkThemeState: {
+            darkTheme: darkTheme,
+            setDarkTheme: setDarkTheme,
+        },
+    };
+
+    return (
+        <AppContext.Provider value={contextState}>
+            {children}
+        </AppContext.Provider>
+    );
+};
+
+export default ContextProvider;
