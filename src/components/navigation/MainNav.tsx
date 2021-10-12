@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useAppContext } from "../context/ContextProvider";
@@ -6,8 +6,6 @@ import { useAppContext } from "../context/ContextProvider";
 import "./MainNav.scss";
 
 const MainNav = (): JSX.Element => {
-    const [hoveringTheme, setHoveringTheme] = useState(false);
-
     const {
         darkThemeState: { darkTheme, setDarkTheme },
     } = useAppContext();
@@ -36,11 +34,7 @@ const MainNav = (): JSX.Element => {
                                 Projects
                             </NavLink>
                         </li>
-                        <li
-                            className="theme-switch"
-                            onMouseEnter={() => setHoveringTheme(true)}
-                            onMouseLeave={() => setHoveringTheme(false)}
-                            onClick={switchTheme}>
+                        <li className="theme-switch" onClick={switchTheme}>
                             <SwitchTransition>
                                 <CSSTransition
                                     key={darkTheme ? "Dark" : "Light"}

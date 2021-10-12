@@ -1,10 +1,4 @@
-import React, {
-    useContext,
-    createContext,
-    useState,
-    useEffect,
-    CSSProperties,
-} from "react";
+import React, { useContext, createContext, useState, useEffect } from "react";
 
 type AnimState = {
     animDone: boolean;
