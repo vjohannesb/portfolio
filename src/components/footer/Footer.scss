@@ -1,0 +1,41 @@
+@import "../../scss/variables";
+
+#mainFooter {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-text {
+        a {
+            position: relative;
+            display: inline-block;
+            opacity: 0.5;
+            text-decoration: none;
+            transition: 0.2s;
+            color: lighten($space-cadet, 75);
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 0px;
+                z-index: -1;
+                background: $zomp;
+                transition: 0.2s;
+            }
+
+            &:hover {
+                color: white;
+                opacity: 0.75;
+
+                &::before {
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
