@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+
+.skillcard {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .skill-container {
+        transition: 0.2s;
+
+        li {
+            margin: 0.5rem;
+            color: lighten($space-cadet, 50);
+            display: inline-block;
+            transition: 0.25s;
+            cursor: default;
+
+            &:hover {
+                color: lighten($space-cadet, 70);
+                transform: translateY(-5px);
+            }
+        }
+    }
+}

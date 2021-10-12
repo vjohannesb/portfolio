@@ -1,0 +1,12 @@
+.skill-fade-enter {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.skill-fade-enter-active {
+    transition: 500ms;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
