@@ -1,18 +1,106 @@
+@import "./variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $space-cadet;
+    color: white;
+    font-family: $secondary-font;
+}
+
 .btns {
     color: lighten($zomp, 15);
     width: max-content;
-    border: 1px solid $zomp;
-    transition: 0.2s;
+    transition: 0.5s;
     background: transparent;
     border-radius: 4px;
     text-decoration: none;
+    position: relative;
 
     &:hover {
-        background: rgba($zomp, 0.5);
         color: white;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        width: 0%;
+        height: 0%;
+        margin: 0 auto;
+        position: absolute;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        transition: 0.4s;
+    }
+
+    &::before {
+        bottom: 3px;
+        left: 3px;
+        border-bottom: 2px dashed transparent;
+        border-left: 2px dashed transparent;
+    }
+
+    &::after {
+        top: 3px;
+        right: 3px;
+        border-top: 2px dashed transparent;
+        border-right: 2px dashed transparent;
+    }
+
+    &:hover::before {
+        width: 100%;
+        height: 100%;
+        border-bottom-color: $zomp;
+        border-left-color: $zomp;
+    }
+
+    &:hover::after {
+        width: 100%;
+        height: 100%;
+        border-top-color: $zomp;
+        border-right-color: $zomp;
     }
 
     &.btn-large {
         padding: 0.5rem 2rem;
     }
+}
+
+.illustration {
+    width: 100%;
+}
+
+.pre-line {
+    color: $zomp;
+    opacity: 1;
+    width: 3rem;
+    margin: 0;
+    padding: 0;
+    margin-right: 2rem;
+    display: inline-block;
+    height: 2px;
+    align-self: center;
+}
+
+h2 {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -99;
+        content: "";
+        width: 100%;
+        height: 35%;
+        background: $zomp;
+    }
+}
+
+::selection {
+    background: $zomp;
 }
