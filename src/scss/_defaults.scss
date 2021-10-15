@@ -4,14 +4,20 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-width: thin;
+    scrollbar-color: lighten($space-cadet, 35) $space-cadet;
+}
+
 body {
     background: $space-cadet;
     color: white;
     font-family: $secondary-font;
+    min-width: 400px;
 }
 
 .btns {
-    color: lighten($zomp, 15);
+    color: var(--alt-accent);
     width: max-content;
     transition: 0.5s;
     background: transparent;
@@ -20,7 +26,7 @@ body {
     position: relative;
 
     &:hover {
-        color: white;
+        color: var(--text-color);
     }
 
     &::before,
@@ -52,15 +58,15 @@ body {
     &:hover::before {
         width: 100%;
         height: 100%;
-        border-bottom-color: $zomp;
-        border-left-color: $zomp;
+        border-bottom-color: var(--accent);
+        border-left-color: var(--accent);
     }
 
     &:hover::after {
         width: 100%;
         height: 100%;
-        border-top-color: $zomp;
-        border-right-color: $zomp;
+        border-top-color: var(--accent);
+        border-right-color: var(--accent);
     }
 
     &.btn-large {
@@ -70,21 +76,10 @@ body {
 
 .illustration {
     width: 100%;
+    max-width: 100%;
 }
 
-.pre-line {
-    color: $zomp;
-    opacity: 1;
-    width: 3rem;
-    margin: 0;
-    padding: 0;
-    margin-right: 2rem;
-    display: inline-block;
-    height: 2px;
-    align-self: center;
-}
-
-h2 {
+.underlined {
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -96,11 +91,13 @@ h2 {
         z-index: -99;
         content: "";
         width: 100%;
-        height: 35%;
-        background: $zomp;
+        height: 0.35em;
+        background: darken($zomp, 15);
+        opacity: 0.8;
     }
 }
 
 ::selection {
     background: $zomp;
+    color: white;
 }
