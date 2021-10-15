@@ -10,9 +10,6 @@ import "./CustomSwitch.scss";
 
 const CustomSwitch = (): JSX.Element => {
     const location = useLocation();
-    console.log(
-        `key: ${location.key}, pathname: ${location.pathname}, search: ${location.search}`
-    );
     return (
         <SwitchTransition>
             <CSSTransition
