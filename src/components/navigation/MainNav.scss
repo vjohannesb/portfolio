@@ -3,10 +3,7 @@
 #navContainer {
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
-    color: white;
-    font-family: $secondary-font;
     font-size: 1.25rem;
-    // box-shadow: -10px -5px 25px lighten($chestnut, 10);
 
     #mainNavigation {
         display: flex;
@@ -26,13 +23,14 @@
 
                 &.theme-switch {
                     color: $light-slate;
-                    transition: 200ms;
+                    transition: 300ms;
+                    margin-right: 0.5rem;
 
                     &::before {
                         content: "";
                         width: 0;
                         height: 0;
-                        transition: 200ms;
+                        transition: 300ms;
                         position: absolute;
                         background: $middle-yellow-red;
                         left: 0;
@@ -48,47 +46,17 @@
                             height: 100%;
                         }
                     }
-
-                    .theme-anim {
-                        &-enter {
-                            transform: translateY(25px);
-                            opacity: 0;
-
-                            &-active {
-                                transition: 400ms;
-                                transition-timing-function: cubic-bezier(
-                                    0.16,
-                                    1.43,
-                                    0.52,
-                                    1.62
-                                );
-                                transform: translateY(0);
-                                opacity: 1;
-                            }
-                        }
-
-                        &-exit {
-                            transform: translateY(0);
-                            opacity: 1;
-
-                            &-active {
-                                transition: 200ms;
-                                transform: translateY(25px);
-                                opacity: 0;
-                            }
-                        }
-                    }
                 }
 
                 a {
-                    color: lighten($zomp, 15);
+                    color: var(--accent);
                     font-weight: bold;
                     text-decoration: none;
                     text-transform: uppercase;
                     transition: color 0.2s;
 
                     &:hover {
-                        color: $zomp;
+                        color: var(--alt-accent);
                     }
 
                     &::before {
@@ -100,7 +68,7 @@
                         opacity: 0;
                         position: absolute;
                         transition: 0.2s;
-                        background: lighten($zomp, 15);
+                        background: var(--accent);
                         border-radius: 100%;
                         visibility: hidden;
                     }
@@ -112,14 +80,39 @@
                         height: 6px;
                         width: 6px;
                         opacity: 1;
-                        background: $zomp;
+                        background: var(--alt-accent);
                     }
 
                     &.active::before {
-                        background: lighten($zomp, 15);
+                        background: var(--accent);
                     }
                 }
             }
+        }
+    }
+}
+
+.theme-anim {
+    &-enter {
+        transform: translateY(25px);
+        opacity: 0;
+
+        &-active {
+            transition: 400ms;
+            transition-timing-function: cubic-bezier(0.16, 1.43, 0.52, 1.62);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    &-exit {
+        transform: translateY(0);
+        opacity: 1;
+
+        &-active {
+            transition: 200ms;
+            transform: translateY(25px);
+            opacity: 0;
         }
     }
 }

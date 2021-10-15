@@ -6,7 +6,6 @@ import { useAppContext } from "./components/context/ContextProvider";
 import CustomSwitch from "./components/custom/CustomSwitch";
 import Footer from "./components/footer/Footer";
 import MainNav from "./components/navigation/MainNav";
-import { themes } from "./components/context/Themes";
 
 function App(): JSX.Element {
     const {
@@ -15,14 +14,12 @@ function App(): JSX.Element {
 
     return (
         <>
-            <div
-                className="App"
-                style={darkTheme ? themes.darkTheme : themes.lightTheme}>
+            <div className={`App theme-${darkTheme ? "dark" : "light"}`}>
                 <Router>
                     <MainNav />
-                    <div className="container mt-5">
+                    <main className="container mt-5">
                         <CustomSwitch />
-                    </div>
+                    </main>
                 </Router>
                 <Footer />
             </div>

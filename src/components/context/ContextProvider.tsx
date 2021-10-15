@@ -32,7 +32,6 @@ export function useAppContext(): Context {
     return useContext(AppContext);
 }
 
-//* Component
 type propTypes = {
     children: React.ReactNode;
 };
@@ -40,6 +39,11 @@ type propTypes = {
 const ContextProvider = ({ children }: propTypes): JSX.Element => {
     const [animDone, setAnimDone] = useState(false);
     const [darkTheme, setDarkTheme] = useState(true);
+
+    useEffect(() => {
+        const selectedTheme = localStorage.getItem("darkTheme");
+        if (selectedTheme) setDarkTheme(selectedTheme === "true");
+    }, []);
 
     useEffect(() => {
         localStorage.setItem("darkTheme", String(darkTheme));

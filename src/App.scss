@@ -1,1 +1,57 @@
 @import "./scss/variables";
+
+.App,
+svg {
+    transition: 400ms;
+}
+
+.theme {
+    &-light {
+        background: $bg-light;
+        color: #{lighten($space-cadet, 25)};
+
+        --secondary-color: #{lighten($space-cadet, 35)};
+        --alt-secondary-color: #{lighten($space-cadet, 35)};
+
+        --accent: #{$blue-gray};
+        --alt-accent: #{darken($blue-gray, 10)};
+
+        .anim-done {
+            .fancy-name,
+            .fancy-title {
+                text-shadow: -2.5px 2.5px 0px darken($melon, 10),
+                    -5px 5px 0px darken($melon, 0),
+                    -7.5px 7.5px 0px lighten($melon, 10) !important;
+            }
+        }
+
+        svg.presentation-img {
+            stroke: transparent;
+        }
+
+        ::selection {
+            background: lighten($zomp, 10);
+            color: $space-cadet;
+        }
+    }
+
+    &-dark {
+        background: $space-cadet;
+        color: white;
+
+        --secondary-color: #{$light-slate};
+        --alt-secondary-color: #{lighten($space-cadet, 50)};
+
+        --accent: #{$zomp};
+        --alt-accent: #{lighten($zomp, 15)};
+
+        svg.presentation-img {
+            stroke: $space-cadet;
+        }
+
+        ::selection {
+            background: darken($zomp, 15);
+            color: white;
+        }
+    }
+}

@@ -34,16 +34,25 @@ const MainNav = (): JSX.Element => {
                                 Projects
                             </NavLink>
                         </li>
-                        <li className="theme-switch" onClick={switchTheme}>
+                        <li
+                            className="theme-switch"
+                            onClick={switchTheme}
+                            aria-label="Switch theme"
+                            tabIndex={0}
+                            role="button">
                             <SwitchTransition>
                                 <CSSTransition
                                     key={darkTheme ? "Dark" : "Light"}
                                     classNames="theme-anim"
                                     timeout={400}>
                                     {darkTheme ? (
-                                        <i className="far fa-moon"></i>
+                                        <i
+                                            className="far fa-moon"
+                                            aria-label="Switch theme"></i>
                                     ) : (
-                                        <i className="far fa-sun"></i>
+                                        <i
+                                            className="far fa-sun"
+                                            aria-label="Switch theme"></i>
                                     )}
                                 </CSSTransition>
                             </SwitchTransition>
