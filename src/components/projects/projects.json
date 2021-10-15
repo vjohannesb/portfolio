@@ -32,7 +32,7 @@
         },
         {
             "title": "CoinBase Bot",
-            "description": "A Python script using the CoinBase API to manage cryptocurrency investments. Currently not utilizing any specially advanced algorithm, but rather managing risk by automating trades given simple conditions. Built a GUI in React (with TypeScript) for a quick and easy oversight of status as well as current holdings, which connects to the bot via an API built in ExpressJS. Not public yet.",
+            "description": "Python script using the CoinBase API to automate cryptocurrency trades. No TA involved, but rather (managing risk by) automating trades given simple conditions. GUI in React (with TypeScript) for quick & easy oversight of status as well as current holdings, and an API in ExpressJS between the two.",
             "languages": ["Python", "ReactJS", "TypeScript", "ExpressJS"],
             "tech": [],
             "github": "",
@@ -47,7 +47,7 @@
         },
         {
             "title": "Portfolio",
-            "description": "First iteration of my website. Built in React with TypeScript. Bootstrap.",
+            "description": "First iteration of my website. Built in React with TypeScript, using Bootstrap for various design features. Continously updated :)",
             "languages": ["ReactJS", "TypeScript", "SCSS"],
             "tech": [],
             "github": "https://github.com/vjohannesb/portfolio",
