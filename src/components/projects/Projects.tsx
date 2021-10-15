@@ -6,16 +6,18 @@ import "./Projects.scss";
 
 const Projects = (): JSX.Element => {
     return (
-        <div id="projects">
+        <section id="projects">
             <h1>Projects</h1>
-            <h2>Featured</h2>
-            <p>The projects I am currently working on.</p>
-            <div className="project-grid">
-                {projects.current.map((p, idx) => (
-                    <ProjectCard key={idx} project={p} />
+            <div className="project-grid mt-5">
+                <ProjectCard
+                    className="project-featured"
+                    project={projects.featured}
+                />
+                {projects.current.map((project, idx) => (
+                    <ProjectCard key={idx} project={project} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

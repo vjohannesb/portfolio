@@ -4,16 +4,15 @@ import "./ProjectCard.scss";
 
 type propTypes = {
     project: Project;
+    className?: string;
 };
 
-const ProjectCard = ({ project }: propTypes): JSX.Element => {
+const ProjectCard = ({ project, className }: propTypes): JSX.Element => {
     return (
-        <div className="project-card">
-            <h3 className="project-title">{project.title}</h3>
-
-            <div className="project-description">
-                <p>{project.description}</p>
-            </div>
+        <article className={`project-card ${className}`}>
+            <header className="project-title">
+                <h3>{project.title}</h3>
+            </header>
 
             <ul className="project-tech">
                 {project.languages.map((p, i) => (
@@ -21,14 +20,38 @@ const ProjectCard = ({ project }: propTypes): JSX.Element => {
                         {p}
                     </li>
                 ))}
-                |
                 {project.tech?.map((p, i) => (
                     <li key={i} className="project-tech-li">
                         {p}
                     </li>
                 ))}
             </ul>
-        </div>
+
+            <div className="project-links">
+                {project.github && (
+                    <a
+                        href={project.github}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="GitHub">
+                        <i className="fab fa-github" />
+                    </a>
+                )}
+                {project.external && (
+                    <a
+                        href={project.external}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="External link">
+                        <i className="fas fa-external-link-alt" />
+                    </a>
+                )}
+            </div>
+
+            <div className="project-description">
+                <p>{project.description}</p>
+            </div>
+        </article>
     );
 };
 

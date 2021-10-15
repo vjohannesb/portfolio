@@ -1,12 +1,57 @@
 {
-    "projects": [
+    "featured": {
+        "title": "School Projects",
+        "description": "School assignments @ EC Utbildning, summed in one repository. Courses included are: C#, Data Storage in .NET, ASP.NET MVC, ASP.NET Web API, as well as HTML5 & CSS3 (+ SCSS) and JavaScript (+ React). In some projects we utilized Azure (Functions, Cosmos Db, Blob Storage, etc.), and/or SCRUM. All examined via GitHub.",
+        "languages": ["C#", ".NET Core", "JavaScript", "SQL"],
+        "tech": [],
+        "github": "https://github.com/vjohannesb/school-projects"
+    },
+    "current": [
         {
-            "title": "string",
-            "description": "string",
-            "languages": ["string[]"],
-            "frameworks": ["string[]"],
-            "github": "string",
-            "external": "string"
+            "title": "BabyMonitor",
+            "description": "Baby monitors are unneccesarily expensive, so I built one myself using a Raspberry Pi Zero W and an old webcam I had laying around. Uses OpenCV (in Python) to capture video and detect motion, a GUI built in ReactJS (with TypeScript), sockets to communicate between the two, and Flask to host it - making it accessable to any device on the local network.",
+            "languages": ["Python", "ReactJS", "TypeScript", "OpenCV", "Flask"],
+            "tech": [],
+            "github": "https://github.com/vjohannesb/baby-monitor"
+        },
+        {
+            "title": "Ashford.se",
+            "description": "Freelance project I did for Ashford Stone Design during my HTML & CSS class. Aimed to keep it as light as possible, while maintaining responsiveness and accessibility - 100 on Performance, Accessibility and Best Practices in Lighthouse on desktop, total 99 on PageSpeed Insights. Used Bootstrap, Lightbox2, jQuery and PurgeCSS.",
+            "languages": ["HTML5", "SCSS", "JavaScript", "jQuery"],
+            "tech": [],
+            "github": "",
+            "external": "https://ashford.se/"
+        },
+        {
+            "title": "Spintr Internship",
+            "description": "Interned at Spintr for seven weeks in spring 2021, where I re-wrote an internal tool from AngularJS to ReactJS with TypeScript. Used FluentUI for the GUI, and built a mock-API in ExpressJS resembling the API the application would later be connecting to. Used Kanban, JIRA, Github.",
+            "languages": ["ReactJS", "TypeScript", "ExpressJS"],
+            "tech": [],
+            "github": "",
+            "external": "https://spintr.com/"
+        },
+        {
+            "title": "CoinBase Bot",
+            "description": "A Python script using the CoinBase API to manage cryptocurrency investments. Currently not utilizing any specially advanced algorithm, but rather managing risk by automating trades given simple conditions. Built a GUI in React (with TypeScript) for a quick and easy oversight of status as well as current holdings, which connects to the bot via an API built in ExpressJS.",
+            "languages": ["Python", "ReactJS", "TypeScript", "ExpressJS"],
+            "tech": [],
+            "github": "",
+            "external": "https://developers.coinbase.com/api/v2"
+        },
+        {
+            "title": "ML Art",
+            "description": "A personal experiment within the domain of Generative Art. Built in Python, I'm designing and training models which will generate musical pieces and accompanying artwork. Mainly based around DCGAN, ESRGAN and RNN models.",
+            "languages": ["Python", "TensorFlow", "Keras"],
+            "tech": [],
+            "github": ""
+        },
+        {
+            "title": "Portfolio",
+            "description": "First iteration of my website. Built in React with TypeScript. Bootstrap.",
+            "languages": ["ReactJS", "TypeScript", "SCSS"],
+            "tech": [],
+            "github": "https://github.com/vjohannesb/portfolio",
+            "external": "https://jbergendahl.se/"
         }
     ]
 }
