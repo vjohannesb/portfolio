@@ -32,7 +32,7 @@
         },
         {
             "title": "CoinBase Bot",
-            "description": "A Python script using the CoinBase API to manage cryptocurrency investments. Currently not utilizing any specially advanced algorithm, but rather managing risk by automating trades given simple conditions. Built a GUI in React (with TypeScript) for a quick and easy oversight of status as well as current holdings, which connects to the bot via an API built in ExpressJS.",
+            "description": "A Python script using the CoinBase API to manage cryptocurrency investments. Currently not utilizing any specially advanced algorithm, but rather managing risk by automating trades given simple conditions. Built a GUI in React (with TypeScript) for a quick and easy oversight of status as well as current holdings, which connects to the bot via an API built in ExpressJS. Not public yet.",
             "languages": ["Python", "ReactJS", "TypeScript", "ExpressJS"],
             "tech": [],
             "github": "",
@@ -40,7 +40,7 @@
         },
         {
             "title": "ML Art",
-            "description": "A personal experiment within the domain of Generative Art. Built in Python, I'm designing and training models which will generate musical pieces and accompanying artwork. Mainly based around DCGAN, ESRGAN and RNN models.",
+            "description": "A personal experiment within the domain of Generative Art. Built in Python, using TensorFlow and Keras, I'm designing and training models which will generate musical pieces and accompanying artwork. Mainly based around Generative Adversarial Networks (GAN) and variations such as DCGAN. Not public yet.",
             "languages": ["Python", "TensorFlow", "Keras"],
             "tech": [],
             "github": ""

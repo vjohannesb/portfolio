@@ -1,27 +1,29 @@
 @import "../../scss/variables";
 
-.fade-enter {
-    transition: $trans-med;
-    filter: blur(25px);
-    transform: scale(1.2);
-    opacity: 0;
-}
+.fade {
+    &-enter {
+        transition: $trans-med;
+        filter: blur(25px);
+        transform: scale(1.2);
+        opacity: 0;
 
-.fade-enter-active {
-    filter: blur(0);
-    transform: scale(1);
-    opacity: 1;
-}
+        &-active {
+            filter: blur(0);
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
 
-.fade-exit {
-    transition: $trans-med;
-    filter: blur(0);
-    transform: scale(1);
-    opacity: 1;
-}
+    &-exit {
+        transition: $trans-med;
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
 
-.fade-exit-active {
-    filter: blur(25px);
-    transform: scale(1.2);
-    opacity: 0;
+        &-active {
+            filter: blur(25px);
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
 }

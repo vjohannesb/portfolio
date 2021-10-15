@@ -8,7 +8,9 @@ const Projects = (): JSX.Element => {
     return (
         <section id="projects">
             <h1>Projects</h1>
-            <div className="project-grid mt-5">
+
+            <h2 className="underlined mb-3">Current</h2>
+            <div className="project-grid">
                 <ProjectCard
                     className="project-featured"
                     project={projects.featured}

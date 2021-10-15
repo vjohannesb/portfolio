@@ -10,10 +10,18 @@ html {
 }
 
 body {
-    background: $space-cadet;
-    color: white;
     font-family: $secondary-font;
     min-width: 400px;
+}
+
+a {
+    color: var(--alt-accent);
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 .btns {

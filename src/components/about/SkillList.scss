@@ -2,24 +2,21 @@
 
 .skillcard {
     ul {
-        list-style-type: none;
-        padding: 0;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
     }
 
     .skill-container {
-        transition: $trans-fast;
-        overflow: hidden;
-
         li {
             color: var(--alt-secondary-color);
             margin: 0.5rem;
-            display: inline;
+            display: inline-block;
             cursor: default;
+            transition: $trans-slow;
 
             &:hover {
+                transition: $trans-fast;
                 color: var(--secondary-color);
                 transform: translateY(-5px);
             }

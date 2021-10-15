@@ -14,7 +14,7 @@ const titles = [
     "Tech fan",
     "Puzzle lover",
     "Problem solver",
-    "Creative",
+    "Creative thinker",
     "Chess player",
     "ML enthusiast",
     "Google Fu Blackbelt",
@@ -76,21 +76,18 @@ const About = (): JSX.Element => {
                         <Link to="/projects">personal project</Link>.
                     </p>
                     <p>
-                        Otherwise, I am most likely either playing with my son,
-                        burning through any given Netflix-show with my wife for
-                        the nth time, or on my computer. While there, if
-                        I&apos;m not currently obsessing about my latest
-                        project, I&apos;m probably playing chess, wasting time
-                        in the compsci section of YouTube, going down some
-                        obscure Wikipedia rabbit hole, or studying math (yes,
-                        voluntarily.)
+                        Otherwise, if I&apos;m not playing with my son or
+                        burning through any given Netflix show with my wife for
+                        the nth time, I&apos;m probably playing chess, lazing
+                        around in the compsci part of YouTube, or studying math
+                        (yes, voluntarily.)
                     </p>
                     <p>
                         It all comes down to my love for learning and problem
                         solving - whether it&apos;s sudoku, chess or
                         programming, trying to figure out the best way to solve
-                        any kind of problem, and/or learning something new, just
-                        gets me in the zone.
+                        a problem or learning something new just gets me in the
+                        zone.
                     </p>
                 </article>
             </div>

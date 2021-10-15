@@ -16,5 +16,4 @@ type Project = {
 type Skill = {
     name: string;
     weight: number;
-    extra?: { name: string }[];
 };

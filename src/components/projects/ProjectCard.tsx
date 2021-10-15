@@ -9,7 +9,7 @@ type propTypes = {
 
 const ProjectCard = ({ project, className }: propTypes): JSX.Element => {
     return (
-        <article className={`project-card ${className}`}>
+        <article className={`project-card ${className ?? ""}`}>
             <header className="project-title">
                 <h3>{project.title}</h3>
             </header>

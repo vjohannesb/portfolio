@@ -47,6 +47,9 @@ const ContextProvider = ({ children }: propTypes): JSX.Element => {
 
     useEffect(() => {
         localStorage.setItem("darkTheme", String(darkTheme));
+        document.getElementsByTagName("body")[0].className = darkTheme
+            ? "theme-dark"
+            : "theme-light";
     }, [darkTheme]);
 
     const contextState: Context = {
