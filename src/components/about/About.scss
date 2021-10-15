@@ -14,49 +14,53 @@
         min-width: 0;
 
         .text-loop {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
             font-weight: bold;
-            color: lighten($zomp, 20);
-            cursor: pointer;
-            max-width: 100%;
+            color: var(--accent);
+            transition: 0.5s;
 
-            .title-wrapper {
-                word-break: break-all;
-                overflow-wrap: break-word;
+            @media (min-width: 768px) {
+                font-size: 2.5rem;
+            }
+
+            @media (min-width: 992px) {
+                font-size: 2rem;
+            }
+
+            @media (min-width: 1200px) {
+                font-size: 2.5rem;
             }
         }
     }
 
     a {
-        color: $zomp;
+        color: var(--alt-accent);
         text-decoration: none;
-        border-bottom: 1px dashed $zomp;
+        border-bottom: 1px dashed currentColor;
         transition: 0.5s;
         position: relative;
-
-        &::selection {
-            color: white;
-        }
 
         &::after {
             content: "";
             position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 0px;
-            background: $zomp;
-            z-index: -99;
+            left: auto;
+            right: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
             transition: 0.2s;
         }
 
         &:hover {
             border-bottom: 1px dashed transparent;
             &::after {
-                height: 2px;
+                width: 100%;
+                left: 0;
+                right: auto;
             }
 
-            color: lighten($zomp, 5);
+            color: var(--accent);
         }
     }
 }

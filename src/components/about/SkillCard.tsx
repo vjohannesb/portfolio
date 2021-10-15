@@ -1,53 +1,22 @@
-import React, { useState } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import React from "react";
 
 import "./SkillCard.scss";
 
 type propTypes = {
     skill: Skill;
+    delay: number;
 };
 
-const SkillCard = ({ skill }: propTypes): JSX.Element => {
-    const [expanded, setExpanded] = useState(false);
-
-    const expand = () => {
-        setExpanded((value) => !value);
-    };
-
+const SkillCard = ({ skill, delay }: propTypes): JSX.Element => {
     return (
-        <>
-            <li
-                style={{
-                    fontSize: 3.2 * skill.weight,
-                    opacity: skill.weight / 10,
-                }}>
-                {skill.name}
-                {skill.extra && (
-                    <span
-                        className="extra-indicator"
-                        style={{ cursor: "pointer" }}
-                        onClick={expand}>
-                        +
-                    </span>
-                )}
-            </li>
-
-            {skill.extra && (
-                <CSSTransition
-                    in={expanded}
-                    timeout={500}
-                    classNames="skill-fade">
-                    <div className="subskill-container">
-                        {expanded &&
-                            skill.extra.map((extra, idx) => (
-                                <span key={idx} className="subskill">
-                                    {extra.name}
-                                </span>
-                            ))}
-                    </div>
-                </CSSTransition>
-            )}
-        </>
+        <li
+            style={{
+                fontSize: 3.2 * skill.weight,
+                animationDelay: `${delay * 0.2}s`,
+            }}
+            className="skill-card">
+            {skill.name}
+        </li>
     );
 };
 

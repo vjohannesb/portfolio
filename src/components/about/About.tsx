@@ -15,7 +15,6 @@ const titles = [
     "Puzzle lover",
     "Problem solver",
     "Creative",
-    "Autodidact",
     "Chess player",
     "ML enthusiast",
     "Google Fu Blackbelt",
@@ -23,40 +22,42 @@ const titles = [
 
 const About = (): JSX.Element => {
     return (
-        <div>
-            <div id="about" className="row">
-                <div className="presentation-illustration d-none d-lg-flex col-lg-5">
-                    <TextLoop
-                        className="text-loop"
-                        interval={2000}
-                        springConfig={{ stiffness: 180, damping: 8 }}>
-                        {titles.map((t, idx) => (
-                            <span key={idx} className="title-span">
-                                <span className="title-wrapper">{t}</span>
-                            </span>
-                        ))}
-                    </TextLoop>
-                    <img
-                        className="illustration"
-                        src={illustration}
-                        alt="Illustration"
-                    />
-                </div>
-                <div className="col-12 col-lg-7">
-                    <h2>Background</h2>
+        <section id="about" className="row">
+            <div className="presentation-illustration col-12 col-lg-5">
+                <TextLoop
+                    className="text-loop mb-5 mb-lg-0"
+                    interval={2000}
+                    springConfig={{ stiffness: 180, damping: 8 }}>
+                    {titles.map((t, idx) => (
+                        <span key={idx} className="title-span">
+                            <span className="title-wrapper">{t}</span>
+                        </span>
+                    ))}
+                </TextLoop>
+                <img
+                    className="illustration d-none d-lg-block"
+                    src={illustration}
+                    alt="Illustration"
+                />
+            </div>
+            <div className="col-12 col-lg-7">
+                <article>
+                    <h2 className="underlined">Background</h2>
                     <p>
                         My journey on the web started around 2004, when we got
                         our first ADSL-connection. A whole new world opened up,
-                        and I was instantly hooked. Eventually, and with a
-                        little break to kindle my passion for music, what
-                        started as (admittedly terrible) websites about me or my
-                        guinea pig 16-something years ago developed into a
-                        career choice and an ever-growing love for code.
+                        and hooked me instantly. Eventually, and with a little
+                        break to kindle my passion for music, what started as
+                        (admittedly terrible) websites about me or my guinea pig
+                        16-something years ago developed into a career choice
+                        and an ever-growing love for code.
                     </p>
+                </article>
 
-                    <h2>What Do I Do?</h2>
+                <article>
+                    <h2 className="underlined">What Do I Do?</h2>
                     <p>
-                        I am currently studying the vocational programme{" "}
+                        I am currently studying the vocational program{" "}
                         <a
                             href="https://ecutbildning.se/utbildningar/webbutvecklare-inom-net/orebro/"
                             rel="noopener noreferrer"
@@ -79,29 +80,26 @@ const About = (): JSX.Element => {
                         burning through any given Netflix-show with my wife for
                         the nth time, or on my computer. While there, if
                         I&apos;m not currently obsessing about my latest
-                        project, I like to play chess, waste time in the compsci
-                        section of YouTube, go down some obscure Wikipedia
-                        rabbit hole, or study math (yes, voluntarily.)
+                        project, I&apos;m probably playing chess, wasting time
+                        in the compsci section of YouTube, going down some
+                        obscure Wikipedia rabbit hole, or studying math (yes,
+                        voluntarily.)
                     </p>
                     <p>
                         It all comes down to my love for learning and problem
                         solving - whether it&apos;s sudoku, chess or
                         programming, trying to figure out the best way to solve
-                        any kind of problem just gets me in the zone.
+                        any kind of problem, and/or learning something new, just
+                        gets me in the zone.
                     </p>
-                </div>
+                </article>
+            </div>
 
-                <div>
-                    <h2>What Can I Do?</h2>
-                    <SkillList />
-                </div>
-            </div>
-            <div>
-                <Link to="/">
-                    <i className="far fa-arrow-alt-circle-left fa-4x"></i>
-                </Link>
-            </div>
-        </div>
+            <article>
+                <h2 className="underlined">Technical Skills</h2>
+                <SkillList />
+            </article>
+        </section>
     );
 };
 

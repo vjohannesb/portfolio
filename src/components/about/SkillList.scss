@@ -11,16 +11,17 @@
 
     .skill-container {
         transition: 0.2s;
+        overflow: hidden;
 
         li {
+            color: var(--alt-secondary-color);
             margin: 0.5rem;
-            color: lighten($space-cadet, 50);
-            display: inline-block;
+            display: inline;
             transition: 0.25s;
             cursor: default;
 
             &:hover {
-                color: lighten($space-cadet, 70);
+                color: var(--secondary-color);
                 transform: translateY(-5px);
             }
         }

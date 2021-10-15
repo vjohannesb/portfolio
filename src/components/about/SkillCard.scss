@@ -1,12 +1,35 @@
+@import "../../scss/variables";
+
 .skill-fade-enter {
     opacity: 0;
     width: 0;
     height: 0;
+
+    &-active {
+        transition: 500ms;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.skill-fade-enter-active {
-    transition: 500ms;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
+.skill-card {
+    @keyframes SkillCardEnter {
+        from {
+            opacity: 0;
+            bottom: -3rem;
+        }
+        to {
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+    opacity: 0;
+    bottom: -3rem;
+
+    position: relative;
+    display: inline-block;
+    animation-name: SkillCardEnter;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
