@@ -18,19 +18,19 @@
                 cursor: pointer;
                 margin-left: 2rem;
                 border-bottom: 2px solid transparent;
-                transition: border-bottom 0.2s;
+                transition: border-bottom $trans-fast;
                 position: relative;
 
                 &.theme-switch {
                     color: $light-slate;
-                    transition: 300ms;
+                    transition: $trans-medfast;
                     margin-right: 0.5rem;
 
                     &::before {
                         content: "";
                         width: 0;
                         height: 0;
-                        transition: 300ms;
+                        transition: $trans-medfast;
                         position: absolute;
                         background: $middle-yellow-red;
                         left: 0;
@@ -53,7 +53,7 @@
                     font-weight: bold;
                     text-decoration: none;
                     text-transform: uppercase;
-                    transition: color 0.2s;
+                    transition: color $trans-fast;
 
                     &:hover {
                         color: var(--alt-accent);
@@ -67,7 +67,7 @@
                         bottom: -4rem;
                         opacity: 0;
                         position: absolute;
-                        transition: 0.2s;
+                        transition: $trans-fast;
                         background: var(--accent);
                         border-radius: 100%;
                         visibility: hidden;
@@ -98,7 +98,7 @@
         opacity: 0;
 
         &-active {
-            transition: 400ms;
+            transition: $trans-med;
             transition-timing-function: cubic-bezier(0.16, 1.43, 0.52, 1.62);
             transform: translateY(0);
             opacity: 1;
@@ -110,7 +110,7 @@
         opacity: 1;
 
         &-active {
-            transition: 200ms;
+            transition: $trans-fast;
             transform: translateY(25px);
             opacity: 0;
         }

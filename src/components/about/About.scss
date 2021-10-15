@@ -17,17 +17,17 @@
             font-size: 2.25rem;
             font-weight: bold;
             color: var(--accent);
-            transition: 0.5s;
+            transition: $trans-slow;
 
-            @media (min-width: 768px) {
+            @media (min-width: $bp-md) {
                 font-size: 2.5rem;
             }
 
-            @media (min-width: 992px) {
+            @media (min-width: $bp-lg) {
                 font-size: 2rem;
             }
 
-            @media (min-width: 1200px) {
+            @media (min-width: $bp-xl) {
                 font-size: 2.5rem;
             }
         }
@@ -37,7 +37,7 @@
         color: var(--alt-accent);
         text-decoration: none;
         border-bottom: 1px dashed currentColor;
-        transition: 0.5s;
+        transition: $trans-med;
         position: relative;
 
         &::after {
@@ -49,7 +49,7 @@
             width: 0;
             height: 2px;
             background: var(--accent);
-            transition: 0.2s;
+            transition: $trans-med;
         }
 
         &:hover {

@@ -5,11 +5,11 @@
     grid-template-columns: 1fr;
     gap: 1rem;
 
-    @media (min-width: 992px) {
+    @media (min-width: $bp-lg) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (min-width: 1400px) {
+    @media (min-width: $bp-xxl) {
         grid-template-columns: repeat(3, 1fr);
     }
 }

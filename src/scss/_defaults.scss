@@ -19,7 +19,7 @@ body {
 .btns {
     color: var(--alt-accent);
     width: max-content;
-    transition: 0.5s;
+    transition: $trans-slow;
     background: transparent;
     border-radius: 4px;
     text-decoration: none;
@@ -38,7 +38,7 @@ body {
         position: absolute;
         border: 2px solid transparent;
         border-radius: 4px;
-        transition: 0.4s;
+        transition: $trans-med;
     }
 
     &::before {

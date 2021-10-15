@@ -1,5 +1,7 @@
+@import "../../scss/variables";
+
 .fade-enter {
-    transition: 400ms;
+    transition: $trans-med;
     filter: blur(25px);
     transform: scale(1.2);
     opacity: 0;
@@ -12,7 +14,7 @@
 }
 
 .fade-exit {
-    transition: 400ms;
+    transition: $trans-med;
     filter: blur(0);
     transform: scale(1);
     opacity: 1;

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap");
 
 //! Fonts
 $primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -8,7 +8,6 @@ $mono-font: "Ubuntu Mono", "SF Mono", "Roboto Mono", "Courier New", Courier,
     monospace;
 
 //! Colors
-$chestnut: #a14a3eff;
 $zomp: #89dbb5ff;
 $blue-gray: #838aa0ff;
 $space-cadet: #171823ff;
@@ -17,3 +16,16 @@ $melon: #fec0aaff;
 $dark-blue: #0a192fff;
 $light-slate: #a8b2d1ff;
 $bg-light: #f5f5faff;
+
+//! Breakpoints
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+
+//! Transitions
+$trans-fast: 200ms;
+$trans-medfast: 250ms;
+$trans-med: 400ms;
+$trans-slow: 500ms;

@@ -50,7 +50,7 @@ $pres-fadein: 0.75s;
         i {
             margin-right: 1rem;
             cursor: pointer;
-            transition: transform 0.2s, color 0.2s;
+            transition: transform $trans-fast, color $trans-fast;
             position: relative;
 
             &:hover {
@@ -88,10 +88,10 @@ $pres-fadein: 0.75s;
                 display: inline-block;
                 animation: WaveEmoji 1.25s ease-out $pres-fadein * 4;
                 user-select: none;
-                transition: 1s;
+                transition: $trans-slow * 2;
 
                 &:hover {
-                    transition: 0.5s;
+                    transition: $trans-slow;
                     transform: rotateZ(360deg);
                 }
             }
@@ -103,7 +103,7 @@ $pres-fadein: 0.75s;
             font-weight: bold;
             font-size: 3.5rem;
             color: var(--text-color);
-            transition: 0.5s;
+            transition: $trans-slow;
         }
 
         .presentation-description {

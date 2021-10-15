@@ -10,14 +10,13 @@
     }
 
     .skill-container {
-        transition: 0.2s;
+        transition: $trans-fast;
         overflow: hidden;
 
         li {
             color: var(--alt-secondary-color);
             margin: 0.5rem;
             display: inline;
-            transition: 0.25s;
             cursor: default;
 
             &:hover {

@@ -13,7 +13,7 @@
             position: relative;
             display: inline-block;
             text-decoration: none;
-            transition: 0.2s;
+            transition: $trans-fast;
             color: var(--alt-accent);
             z-index: 1;
 
@@ -25,7 +25,7 @@
                 height: 0px;
                 z-index: -1;
                 background: $zomp;
-                transition: 0.2s;
+                transition: $trans-fast;
             }
 
             &:hover {
