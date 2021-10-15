@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import "./App.scss";
-import CustomSwitch from "./components/custom/CustomSwitch";
+import CustomSwitch from "./components/customSwitch/CustomSwitch";
 import Footer from "./components/footer/Footer";
 import MainNav from "./components/navigation/MainNav";
 
