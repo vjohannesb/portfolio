@@ -11,7 +11,7 @@ A relatively simple portfolio website built in ReactJS, with TypeScript. Initiat
 
 ## 🔴 Attribution
 
-Please refer to my repo, or my website, if you decide to use any major part of this - I did spend some time on getting everything how I wanted it to be, and some sort of credit would be nice. Other than that, all is free to use however you please!
+Feel free to refer to my repo, or my website, if you decide to use any major part of this - I did spend some time on getting everything how I wanted it to be, and some sort of credit would be nice. Other than that, all is free to use however you please!
 And with that said, please feel free to report bugs or submit pull requests with improvements. Any and all help is greatly appreciated ☺
 
 ## 📦 Extra Packages
