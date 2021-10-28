@@ -9,7 +9,7 @@
     "current": [
         {
             "title": "BabyMonitor",
-            "description": "Baby monitors are unneccesarily expensive, so I built one myself using a Raspberry Pi Zero W and an old webcam I had laying around. Uses OpenCV (in Python) to capture video and detect motion, a GUI built in ReactJS (with TypeScript), sockets to communicate between the two, and Flask to host it - making it accessable to any device on the local network.",
+            "description": "A baby monitor built in Python, and React, running on a Raspberry Pi Zero W with an old webcam I had laying around. Uses OpenCV (in Python) to capture video and detect motion, a GUI built in React (with TypeScript), sockets to communicate between the two, and Flask to host it - making it accessable to any device on the local network.",
             "languages": ["Python", "ReactJS", "TypeScript", "OpenCV", "Flask"],
             "tech": [],
             "github": "https://github.com/vjohannesb/baby-monitor"
@@ -29,6 +29,20 @@
             "tech": [],
             "github": "",
             "external": "https://spintr.com/"
+        },
+        {
+            "title": "BananoDrip",
+            "description": "A crypto faucet (a website that awards users small amounts of a given crypto.) Frontend in React (with TypeScript), primary backend in PHP, and an Express app hosted on Heroku with the BananoJS library for easier transaction handling. hCaptcha (and more) for bot protection.",
+            "languages": [
+                "ReactJS",
+                "TypeScript",
+                "PHP",
+                "ExpressJS",
+                "Heroku"
+            ],
+            "tech": [],
+            "github": "https://github.com/BananoCoin/bananojs",
+            "external": "https://bananodrip.com/"
         },
         {
             "title": "CoinBase Bot",
